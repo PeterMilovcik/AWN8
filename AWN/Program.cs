@@ -10,6 +10,9 @@ var commandInvoker = serviceProvider.GetRequiredService<CommandInvoker>();
 while (true)
 {
     var input = Console.ReadLine();
-    var result = await commandInvoker.ExecuteCommandAsync(input);
-    Console.WriteLine(result);
+    if (input != null)
+    {
+        var result = await commandInvoker.ExecuteCommandAsync(input);
+        Console.WriteLine(result);
+    }
 }
