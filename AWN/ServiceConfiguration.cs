@@ -1,4 +1,5 @@
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Playwright;
 
 namespace AWN
 {
@@ -6,8 +7,15 @@ namespace AWN
     {
         public static void AddServices(this IServiceCollection services)
         {
+            var playwright = Playwright.CreateAsync().GetAwaiter().GetResult();
+            var browser = playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions { Headless = false })
+                                    .GetAwaiter().GetResult();
+            var page = browser.NewPageAsync().GetAwaiter().GetResult();
+
+            services.AddSingleton(page);
             services.AddSingleton<CommandInvoker>();
             services.AddSingleton<ICommand, ExitCommand>();
+            services.AddSingleton<ICommand, NavigateCommand>();
             // Register other commands here
         }
     }
