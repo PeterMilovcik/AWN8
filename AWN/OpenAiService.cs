@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using OpenAI;
+using OpenAI.Chat;
 
 namespace AWN
 {
