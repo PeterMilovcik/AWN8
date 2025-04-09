@@ -14,6 +14,10 @@
 - **Purpose**: Generates a response based on a prompt and the web page content.
 - **Usage**: Type any non-empty input to generate a response based on the prompt and the web page content.
 
+### TextToSpeechService
+- **Purpose**: Converts text to speech using OpenAI's text-to-speech API.
+- **Usage**: The service is automatically used in the command loop to convert output text to speech while retaining console output. Press "Enter" to cancel playback.
+
 ## Installation Instructions
 
 To install the Playwright CLI and browsers, use the following dotnet command:
