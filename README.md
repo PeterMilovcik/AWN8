@@ -18,6 +18,10 @@
 - **Purpose**: Converts text to speech using OpenAI's text-to-speech API.
 - **Usage**: The service is automatically used in the command loop to convert output text to speech while retaining console output. Press "Enter" to cancel playback.
 
+### SpeechToTextService
+- **Purpose**: Converts speech to text using OpenAI's whisper-1 model and NAudio for audio capture.
+- **Usage**: The service is automatically used in the command loop to convert voice input to text. Press "Enter" to start and stop recording. The transcribed text is then used as command input.
+
 ## Installation Instructions
 
 To install the Playwright CLI and browsers, use the following dotnet command:

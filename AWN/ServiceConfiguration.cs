@@ -19,6 +19,7 @@ namespace AWN
             services.AddSingleton<OpenAiService>();
             services.AddSingleton<ICommand, AiCommand>();
             services.AddSingleton<TextToSpeechService>();
+            services.AddSingleton<SpeechToTextService>();
             // Register other commands here
         }
     }
