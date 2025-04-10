@@ -18,6 +18,10 @@
 - **Purpose**: Clicks a specified element on the web page.
 - **Usage**: Type a command containing the substring "click" followed by a description of the target element. The command will generate a locator string from the HTML content and target element description, and click the element using Playwright.
 
+### TypeCommand
+- **Purpose**: Types text into a specified HTML element.
+- **Usage**: Type "type <text>" (case-insensitive) to type the specified text into the target HTML element. The command will remove the "type " prefix and use Playwright to type the text into the page.
+
 ### TextToSpeechService
 - **Purpose**: Converts text to speech using OpenAI's text-to-speech API.
 - **Usage**: The service is automatically used in the command loop to convert output text to speech while retaining console output. Press "Enter" to cancel playback.

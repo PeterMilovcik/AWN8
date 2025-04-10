@@ -18,6 +18,7 @@ namespace AWN
             services.AddSingleton<ICommand, NavigateCommand>();
             services.AddSingleton<OpenAiService>();
             services.AddSingleton<ICommand, ClickCommand>();
+            services.AddSingleton<ICommand, TypeCommand>();
             services.AddSingleton<ICommand, AiCommand>();
             services.AddSingleton<TextToSpeechService>();
             services.AddSingleton<SpeechToTextService>();
