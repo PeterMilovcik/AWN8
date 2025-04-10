@@ -39,15 +39,7 @@ while (true)
     }
     else if (inputMethod == "2")
     {
-        Console.WriteLine("Press Enter to start recording...");
-        Console.ReadLine();
-
-        var recordingTask = Task.Run(() => speechToTextService.CaptureAudio("input.mp3"));
-
-        Console.WriteLine("Press Enter to stop recording...");
-        Console.ReadLine();
-
-        await recordingTask;
+        speechToTextService.CaptureAudio("input.mp3");
 
         var transcription = await speechToTextService.TranscribeAudioAsync("input.mp3");
         Console.WriteLine($"Transcription: {transcription}");
