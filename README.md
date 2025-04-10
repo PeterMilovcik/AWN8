@@ -14,6 +14,10 @@
 - **Purpose**: Generates a response based on a prompt and the web page content.
 - **Usage**: Type any non-empty input to generate a response based on the prompt and the web page content.
 
+### ClickCommand
+- **Purpose**: Clicks a specified element on the web page.
+- **Usage**: Type a command containing the substring "click" followed by a description of the target element. The command will generate a locator string from the HTML content and target element description, and click the element using Playwright.
+
 ### TextToSpeechService
 - **Purpose**: Converts text to speech using OpenAI's text-to-speech API.
 - **Usage**: The service is automatically used in the command loop to convert output text to speech while retaining console output. Press "Enter" to cancel playback.
