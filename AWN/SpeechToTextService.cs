@@ -54,13 +54,13 @@ namespace AWN
                     waveIn.RecordingStopped += (sender, e) =>
                     {
                         writer.Dispose();
-                        waveIn.Dispose();
                     };
 
                     waveIn.StartRecording();
                     Console.WriteLine("Recording... Press Enter to stop.");
                     Console.ReadLine();
                     waveIn.StopRecording();
+                    waveIn.Dispose();
                 }
             }
         }
